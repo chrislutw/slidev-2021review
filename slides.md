@@ -33,23 +33,54 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+layout: two-cols
+---
 
-# 回顧 2021 的精華
+# 回顧 2021 年 目標
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+去年給自己的目標
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- <logos-vue /> Vue 3 準備接軌
+- <logos-cypress /> 自動測試導入
+- <logos-tailwindcss-icon /> 有效且組織化管理CSS(Tailwind)
 
-<br>
-<br>
+<br />
+<br />
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+# 目標達成率
+
+實際工作達成1項，但也持續關注動態
+
+<div class="text-8xl">33%</div>
+
+::right::
+# 實際產出
+
+工單系統已有詳細清單，整理出以下為精華
+
+- <logos-nuxt-icon /><logos-tailwindcss-icon /> **金銀島歷程** - 網站改版 aspx → nuxt2
+
+<v-clicks>
+
+- <vscode-icons-file-type-elastic /> **ELK 平台** - 收集伺服器 Log 到平台上
+
+</v-clicks>
+<v-clicks>
+
+- <logos-vue /> **Admin2後端工具** - 網站改版 aspx → vue2
+
+</v-clicks>
+
+<br />
+<br />
+
+# 自我提升
+
+持續追大神帳號關注前端技術發表
+
+- twitter - @youyuxi, @antfu7, @Atinux, @debs_obrien, @addyosmani, @_piO_
+- 線上研討會 - VueConf Toronto 2021, Nuxt Nation 2021, Chrome Dev Summit 2021
+
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
