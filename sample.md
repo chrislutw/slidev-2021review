@@ -12,20 +12,33 @@ highlighter: shiki
 lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
-  ## 2021 年 回顧與未來展望
+  ## Slidev Starter Template
+  Presentation slides for developers.
+
+  Learn more at [Sli.dev](https://sli.dev)
 # persist drawings in exports and build
 drawings:
   persist: false
 ---
 
-# 2021年 回顧與未來展望
+# Welcome to Slidev
 
-技術服務部 網頁組 呂正中
+Presentation slides for developers
 
 <div class="pt-12">
-  <span @click="$slidev.nav.next" class="rounded cursor-pointer py-1 px-2" hover="bg-white bg-opacity-10">
-    按空白鍵到下一頁 <carbon:arrow-right class="inline"/>
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Press Space for next page <carbon:arrow-right class="inline"/>
   </span>
+</div>
+
+<div class="abs-br m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:edit />
+  </button>
+  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
 </div>
 
 <!--
@@ -34,7 +47,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# 回顧 2021 的精華
+# What is Slidev?
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -63,7 +76,7 @@ h1 {
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;
 }
 </style>
@@ -86,10 +99,10 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 <!-- https://sli.dev/guide/animations.html#click-animations -->
 <img
   v-click
-  class="opacity-50 -bottom-9 -left-7 w-80 absolute"
+  class="absolute -bottom-9 -left-7 w-80 opacity-50"
   src="https://sli.dev/assets/arrow-bottom-left.svg"
 />
-<p v-after class="opacity-30 transform bottom-23 left-45 -rotate-10 absolute">Here!</p>
+<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
@@ -110,7 +123,7 @@ interface User {
 
 function updateUser(id: number, update: User) {
   const user = getUser(id)
-  const newUser = {...user, ...update}
+  const newUser = {...user, ...update}  
   saveUser(id, newUser)
 }
 ```
@@ -135,7 +148,7 @@ function updateUser(id: number, update: User) {
 
 # Components
 
-<div grid="~ gap-4 cols-2">
+<div grid="~ cols-2 gap-4">
 <div>
 
 You can use Vue components directly inside your slides.
@@ -172,7 +185,7 @@ class: px-20
 
 Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
 
-<div grid="~ gap-2 cols-2" m="-t-2">
+<div grid="~ cols-2 gap-2" m="-t-2">
 
 ```yaml
 ---
@@ -212,33 +225,33 @@ Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
 </div>
 ```
 
-<div class="mt-6 w-60 relative">
-  <div class="h-40 w-40 relative">
+<div class="w-60 relative mt-6">
+  <div class="relative w-40 h-40">
     <img
       v-motion
       :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
       :enter="final"
-      class="top-0 right-0 bottom-0 left-0 absolute"
+      class="absolute top-0 left-0 right-0 bottom-0"
       src="https://sli.dev/logo-square.png"
     />
     <img
       v-motion
       :initial="{ y: 500, x: -100, scale: 2 }"
       :enter="final"
-      class="top-0 right-0 bottom-0 left-0 absolute"
+      class="absolute top-0 left-0 right-0 bottom-0"
       src="https://sli.dev/logo-circle.png"
     />
     <img
       v-motion
       :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
       :enter="final"
-      class="top-0 right-0 bottom-0 left-0 absolute"
+      class="absolute top-0 left-0 right-0 bottom-0"
       src="https://sli.dev/logo-triangle.png"
     />
   </div>
 
-  <div
-    class="top-14 left-40 text-5xl text-[#2B90B6] -z-1 absolute"
+  <div 
+    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
     v-motion
     :initial="{ x: -80, opacity: 0}"
     :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
@@ -305,7 +318,7 @@ $$
 
 You can create diagrams / graphs from textual descriptions, directly in your Markdown.
 
-<div class="-mb-6 grid pt-4 gap-10 grid-cols-2">
+<div class="grid grid-cols-2 gap-10 pt-4 -mb-6">
 
 ```mermaid {scale: 0.9}
 sequenceDiagram
