@@ -59,17 +59,9 @@ layout: two-cols
 工單系統已有詳細清單，整理出以下為精華
 
 - <logos-nuxt-icon /><logos-tailwindcss-icon /> **金銀島歷程** - 網站改版 aspx → nuxt2
-
-<v-clicks>
-
 - <vscode-icons-file-type-elastic /> **ELK 平台** - 收集伺服器 Log 到平台上
-
-</v-clicks>
-<v-clicks>
-
 - <logos-vue /> **Admin2後端工具** - 網站改版 aspx → vue2
 
-</v-clicks>
 
 <br />
 <br />
@@ -101,26 +93,20 @@ h1 {
 
 ---
 
-# Navigation
+# <logos-nuxt-icon /><logos-tailwindcss-icon />金銀島歷程改版內容
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+此次改版有很多亮眼的功能，節省很多開發時間
 
-### Keyboard Shortcuts
+### 功能
 
 |     |     |
 | --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="opacity-50 -bottom-9 -left-7 w-80 absolute"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="opacity-30 transform bottom-23 left-45 -rotate-10 absolute">Here!</p>
+| `<static-img />` 圖片基礎元件 | 多語系圖片容錯為網站預設語系 |
+| <logos-tailwindcss-icon /> 原子式 CSS | 複製元件時只需要 `.vue` 檔|
+| 多樣化的打包部署方式 | SSR、SPA、ISG、<kbd><span class="text-red-400">Static</span></kbd> 部署至任意伺服器 |
+| 累積 2x 種共用基礎元件 | 修改大量頁面時減少維護成本 |
+| PlayGround | 人員測試、調整、製作元件樣式或範例 |
+| 多專案發佈 | 同一份原碼，不同的環境設定 |
 
 ---
 layout: image-right
