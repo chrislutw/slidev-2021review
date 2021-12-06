@@ -102,7 +102,7 @@ h1 {
 |     |     |
 | --- | --- |
 | `<static-img />` 圖片基礎元件 | 多語系圖片容錯為網站預設語系 |
-| <logos-tailwindcss-icon /> 原子式 CSS | 複製元件時只需要 `.vue` 檔|
+| <logos-tailwindcss-icon /> 原子化 CSS(Atomic CSS) | 複製元件時只需要 `.vue` 檔|
 | 多樣化的打包部署方式 | SSR、SPA、ISG、<kbd><span class="text-red-400">Static</span></kbd> 部署至任意伺服器 |
 | 累積 2x 種共用基礎元件 | 修改大量頁面時減少維護成本 |
 | PlayGround | 人員測試、調整、製作元件樣式或範例 |
