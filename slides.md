@@ -22,16 +22,6 @@ drawings:
 
 技術服務部 網頁組 呂正中
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="rounded cursor-pointer py-1 px-2" hover="bg-white bg-opacity-10">
-    按空白鍵到下一頁 <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
 ---
 layout: two-cols
 ---
@@ -113,240 +103,96 @@ layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# 未達成目標
 
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
----
-
-# Components
-
-<div grid="~ gap-4 cols-2">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ gap-2 cols-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="mt-6 w-60 relative">
-  <div class="h-40 w-40 relative">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="top-0 right-0 bottom-0 left-0 absolute"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="top-0 right-0 bottom-0 left-0 absolute"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="top-0 right-0 bottom-0 left-0 absolute"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="top-14 left-40 text-5xl text-[#2B90B6] -z-1 absolute"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+> <logos-vue /> Vue 3 準備接軌
 
 <br>
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+- 去年剛出社群資源尚未穩定
+- nuxt 3 開源專案尚未完成開發
+- Admin2 el-element-admin 專案，直接遷移至 vue3 版本有難度
 
-Block
-$$
-\begin{array}{c}
+---
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
 
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+# 未達成目標
 
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
+> <logos-cypress /> 自動測試導入
 
 <br>
 
-[Learn more](https://sli.dev/guide/syntax#latex)
+- 疫情關係報名的課程沒報到
+- 有先預習課程推薦書藉「單元測試的藝術-第二版」
 
 ---
 
-# Diagrams
+# 2022 年 新目標
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+去年的經驗讓我發現目標訂太大、太多，實際執行有難度，今年以下列2項為主
 
-<div class="-mb-6 grid pt-4 gap-10 grid-cols-2">
+<br>
+<br>
 
-```mermaid {scale: 0.9}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
+## 去年的目標 - <logos-cypress />自動測試導入
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+<br>
+<br>
 
-</div>
+## 前端多媒體資源分離 - <logos-cloudinary />可程式化的圖片媒體資源
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
+<br>
+<br>
+<br>
+<br>
+
+# 次要目標
+
+在主要目標達成情況下，有餘力才執行
+## Vue 3 準備接軌  - Admin2 <logos-vue /> vue3 導入
 
 ---
-layout: center
-class: text-center
+layout: image-right
+image: https://i.ytimg.com/vi/UFErY92HeyM/maxresdefault.jpg
 ---
 
-# Learn More
+# <logos-cypress /> 自動測試導入
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+不累積測試項目，會讓你的專案充滿不確定性，無法評估改動時程
+
+- 痛是一時的，導入的必經之路
+- 不求測試覆蓋率，而是測試項目與開發時程的甜密點
+- 金銀島年度計劃 - 穩定的後勤補給
+
+## 預期效益
+
+- 減少出包機率
+- 再也不怕改東壞西
+- 減少品檢負擔
+- 開發時會養成好習慣
+
+---
+
+# <logos-cloudinary />可程式化的圖片媒體資源
+
+靜態圖片資源、多媒體資源與程式共存在 git 切換分支、打包時間變慢
+
+- 可程式化的圖片路徑
+- 可線上直接編輯圖片
+- 有圖片管理上傳後台介面、統計資料
+
+## 預期效益
+
+- 減少出包機率
+- 再也不怕改東壞西
+- 減少品檢負擔
+- 開發時會養成好習慣
+
+---
+layout: image
+image: https://www.astralweb.com.tw/wp-content/uploads/2018/12/Cloudinary-Introduction-4.png
+---
+
