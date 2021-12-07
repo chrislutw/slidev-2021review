@@ -155,9 +155,9 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 ## Vue 3 準備接軌  - Admin2 <logos-vue /> vue3 導入
 
 ---
-layout: image-right
-image: https://i.ytimg.com/vi/UFErY92HeyM/maxresdefault.jpg
----
+
+<div class="grid gap-4 grid-cols-2">
+<div>
 
 # <logos-cypress /> 自動測試導入
 
@@ -174,25 +174,61 @@ image: https://i.ytimg.com/vi/UFErY92HeyM/maxresdefault.jpg
 - 減少品檢負擔
 - 開發時會養成好習慣
 
----
+</div>
+<div class="myimage">
+</div>
+</div>
 
+
+
+<style>
+  .myimage {
+    background-image: url(https://i.ytimg.com/vi/UFErY92HeyM/maxresdefault.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+</style>
+
+---
+layout: image-right
+image: /cloudinary-interface.png
+---
 # <logos-cloudinary />可程式化的圖片媒體資源
 
-靜態圖片資源、多媒體資源與程式共存在 git 切換分支、打包時間變慢
-
 - 可程式化的圖片路徑
-- 可線上直接編輯圖片
-- 有圖片管理上傳後台介面、統計資料
+- 可線上直接編輯圖片、並有眾多插件可供使用
+- 有圖片管理上傳後台介面、API、統計資料
+- 支援 gcs, s3 CDN 存儲
 
 ## 預期效益
 
-- 減少出包機率
-- 再也不怕改東壞西
-- 減少品檢負擔
-- 開發時會養成好習慣
+- git 切換分支、打包、發佈速度提升加速
+- 可依客戶裝置提供加載不同實際大小圖片，加快載入速度
+- 編輯效果可以儲存腳本，運營人員也能無痛調整
 
 ---
 layout: image
 image: https://www.astralweb.com.tw/wp-content/uploads/2018/12/Cloudinary-Introduction-4.png
+class: ~ !bg-contain
+---
 ---
 
+# Admin2 <logos-vue /> vue3 導入
+
+## 痛點
+
+- 現行的後端網站 mixin 功能，無法高度客製頁面需求
+- 開發製作邏輯、流程、畫面都綁著 mixin ，開發者往往要爬完 1000 行才能知其運作細節
+- Admin2 `el-element-admin` 專案，直接遷移至 vue3 版本有難度
+
+## 已知的新舊站整合 BUG
+
+- 舊站把 `query` 當作頁面的 `path` 在使用，導致新站鑲嵌舊站時發生找不到頁面問題
+- 新站鑲嵌舊站時，從舊站開啟新站的連結(無另開視窗)，會發生無限堆疊的鑲嵌情況
+
+## 建議改善方案
+
+- Vue 3 組合式 API 重構邏輯、流程、畫面，分層分類
+- 重新套用 [element-plus-admin](https://element-plus-admin.hsianglee.cn/) 專案 [<logos-github-icon>](https://github.com/hsiangleev/element-plus-admin)
+- 建議新舊站不要鑲嵌
