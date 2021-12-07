@@ -230,5 +230,5 @@ class: ~ !bg-contain
 ## 建議改善方案
 
 - Vue 3 組合式 API 重構邏輯、流程、畫面，分層分類
-- 重新套用 [element-plus-admin](https://element-plus-admin.hsianglee.cn/) 專案 [<logos-github-icon>](https://github.com/hsiangleev/element-plus-admin)
+- 重新套用 [element-plus-admin](https://element-plus-admin.hsianglee.cn/) 專案
 - 建議新舊站不要鑲嵌
